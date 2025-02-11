@@ -19,8 +19,12 @@ RUN conda install -y -q -c conda-forge py4j
 
 RUN pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 
+# I1 dependencies
 RUN curl https://github.com/cmencar/py4jfml/raw/refs/heads/master/dist/py4jfml-1.0.tar.gz \
     && pip install py4jfml-1.0.tar.gz \
     && rm -rf py4jfml-1.0.tar.gz
+
+# I2 dependencies
+RUN pip install simplenlg tabulate interpret xgboost dice_ml opencv-python --quiet
 
 WORKDIR "${HOME}"
