@@ -25,6 +25,6 @@ RUN curl https://github.com/cmencar/py4jfml/raw/refs/heads/master/dist/py4jfml-1
     && rm -rf py4jfml-1.0.tar.gz
 
 # I2 dependencies
-RUN pip install simplenlg tabulate interpret xgboost dice_ml opencv-python --quiet
+RUN pip install platypus-opt simplenlg tabulate interpret xgboost dice_ml opencv-python --quiet
 
 WORKDIR "${HOME}"
